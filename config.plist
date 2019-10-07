@@ -22,30 +22,6 @@
 				<key>Path</key>
 				<string>SSDT-EXT.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>plugin-type=1</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PLUG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>EC</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-EC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USBX</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-USBX.aml</string>
-			</dict>
 		</array>
 		<key>Block</key>
 		<array/>
@@ -69,6 +45,7 @@
 				</data>
 				<key>OemTableId</key>
 				<data>
+				U2F0YVRhYmw=
 				</data>
 				<key>Replace</key>
 				<data>
