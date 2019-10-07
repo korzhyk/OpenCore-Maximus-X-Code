@@ -1,7 +1,11 @@
 # Hackintosh on Asus ROG Maximus X Code
 
+<p align="center">
+  <img src="https://i.imgur.com/YNuOG3x.png" alt="About this mac specs">
+</p>
+
 *Mojave nVidia webdriver not avaliable yet :cry:* :idea: But you can use a High Sierra, why not?
-This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install.
+This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
 
 ## Hardware configuration
 
@@ -20,11 +24,15 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 # Installation
 
 ## BIOS Settings
-* *MIT* → Advanced Frequency Settings → Advanced CPU Core Settings → CFG Lock : **Disabled**
-* *Peripherals* → USB Configuration → XHCI Hand-off : **Enabled**
-* *Peripherals* → USB Configuration → Port 60/64 Emulation : **Disabled**
-* *Peripherals* → Initial Display Output : **PCIe 1 Slot** *(Only if using external GPU)*
-* *Chipset* → IOAPIC 24-119 Entries : **Disabled**
+
+* *Exit* → Load Optimized Defaults [Yes]
+* *Advanced* → System Agent (SA) Configuration → VT-d [**Enabled**]
+* *Advanced* → System Agent (SA) Configuration → Primary Display [**PEG**]
+* *Advanced* → System Agent (SA) Configuration → DVMT Pre-Allocated [**64M**]
+* *Advanced* → USB Configuration → Legacy USB Support [**Disabled**]
+* *Advanced* → CPU Configuration → Intel Virtualization Technology [**Enabled**]
+* *Boot* → Fast Boot [**Disabled**]
+* *Boot* → CSM (Compatibility Support Module) → Launch CSM [**Disabled**]
 
 ## What's behind the scenes
 
@@ -87,6 +95,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [7]: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/config.plist/coffee-lake#platforminfo
 [8]: https://github.com/acidanthera/IntelMausi
 [9]: https://github.com/acidanthera/AppleSupportPkg
+[10]: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/
 
 [101]: https://i.imgur.com/eTJDKaB.jpg
 
