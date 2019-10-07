@@ -85,16 +85,6 @@
 					<key>Codec</key>
 					<integer>0</integer>
 					<key>Comment</key>
-					<string>SPDIF off, to turn on set enable=1</string>
-					<key>Enable</key>
-					<string>0</string>
-					<key>Node</key>
-					<integer>30</integer>
-				</dict>
-				<dict>
-					<key>Codec</key>
-					<integer>0</integer>
-					<key>Comment</key>
 					<string>Rear Orange</string>
 					<key>Config</key>
 					<string>0x01016020</string>
