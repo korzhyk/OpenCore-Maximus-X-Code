@@ -139,8 +139,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelMausi</string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -153,8 +151,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/Lilu</string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -167,8 +163,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VirtualSMC</string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -181,8 +175,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -195,8 +187,6 @@
 				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -209,8 +199,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooHDA</string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -221,10 +209,6 @@
 				<string>USB Ports Mapping</string>
 				<key>Enabled</key>
 				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MatchKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -390,10 +374,28 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>AppleGenericInput.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 		</array>
+		<key>Input</key>
+		<dict>
+			<key>KeyForgetThreshold</key>
+			<integer>5</integer>
+			<key>KeyMergeThreshold</key>
+			<integer>2</integer>
+			<key>KeySupport</key>
+			<true/>
+			<key>KeySupportMode</key>
+			<string>Auto</string>
+			<key>KeySwap</key>
+			<false/>
+			<key>PointerSupport</key>
+			<false/>
+			<key>PointerSupportMode</key>
+			<string>ASUS</string>
+			<key>TimerResolution</key>
+			<integer>50000</integer>
+		</dict>
 		<key>Protocols</key>
 		<dict>
 			<key>AppleBootPolicy</key>
