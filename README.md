@@ -49,7 +49,6 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * ApfsDriverLoader.efi - Must have to run 10.13.6+
 * FwRuntimeServices.efi - Must have to work with native NVRAM
-* AppleGenericInput.efi - This need for keyboard key handling.
 * ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][6].
 
 All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `VBoxHfs.efi`
@@ -83,6 +82,9 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 08/10/2019
+* Update config to OC v0.5.1
+* Removed `AppleGenericInput.efi`, already bundled in OpenCore v0.5.1
 ###### 07/10/2019
 * The initial push to GitHub
 
