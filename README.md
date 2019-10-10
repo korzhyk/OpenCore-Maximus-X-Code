@@ -86,6 +86,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 * Removed custom DSDT
 * Updated config
 * Increase iMix and PCM in VoodooHDA.kext
+* Fixed resolution while booting
 ###### 08/10/2019
 * Update config to OC v0.5.1
 * Removed `AppleGenericInput.efi`, already bundled in OpenCore v0.5.1
