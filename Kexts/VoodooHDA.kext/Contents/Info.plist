@@ -71,13 +71,13 @@
 				<key>Monitor</key>
 				<integer>90</integer>
 				<key>PCM</key>
-				<integer>90</integer>
+				<integer>95</integer>
 				<key>Rec</key>
 				<integer>80</integer>
 				<key>iGain</key>
 				<integer>90</integer>
 				<key>iMix</key>
-				<integer>90</integer>
+				<integer>95</integer>
 			</dict>
 			<key>NodesToPatch</key>
 			<array>
