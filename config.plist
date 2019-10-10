@@ -102,7 +102,11 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AwCSPg==
+				AwASWQ==
+				</data>
+				<key>device-id</key>
+				<data>
+				ElkAAA==
 				</data>
 			</dict>
 		</dict>
