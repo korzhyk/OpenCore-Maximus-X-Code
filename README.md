@@ -82,6 +82,10 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 10/10/2019
+* Removed custom DSDT
+* Updated config
+* Increase iMix and PCM in VoodooHDA.kext
 ###### 08/10/2019
 * Update config to OC v0.5.1
 * Removed `AppleGenericInput.efi`, already bundled in OpenCore v0.5.1
