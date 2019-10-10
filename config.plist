@@ -235,9 +235,9 @@
 			<key>ConsoleBehaviourOs</key>
 			<string>ForceGraphics</string>
 			<key>ConsoleBehaviourUi</key>
-			<string>ForceText</string>
+			<string>Text</string>
 			<key>ConsoleMode</key>
-			<string>Max</string>
+			<string></string>
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideSelf</key>
@@ -247,9 +247,9 @@
 			<key>Resolution</key>
 			<string>Max</string>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>Timeout</key>
-			<integer>3</integer>
+			<integer>5</integer>
 			<key>UsePicker</key>
 			<true/>
 		</dict>
