@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Custom DSDT</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>DSDT.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT Extension</string>
 				<key>Enabled</key>
 				<true/>
@@ -23,25 +15,16 @@
 				<string>SSDT-EXT.aml</string>
 			</dict>
 		</array>
-		<key>Block</key>
-		<array/>
 		<key>Patch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
 				<string>SAT0 to SATA</string>
-				<key>Count</key>
-				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
 				U0FUMA==
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
 				</data>
 				<key>OemTableId</key>
 				<data>
@@ -51,15 +34,19 @@
 				<data>
 				U0FUQQ==
 				</data>
-				<key>ReplaceMask</key>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>_DSM to ZDSM</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
 				<data>
+				X0RTTQ==
 				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
+				<key>Replace</key>
 				<data>
+				WkRTTQ==
 				</data>
 			</dict>
 		</array>
@@ -134,7 +121,7 @@
 				<key>BundlePath</key>
 				<string>IntelMausi.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>Ethernet</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -146,7 +133,7 @@
 				<key>BundlePath</key>
 				<string>Lilu.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>Magic</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -158,7 +145,7 @@
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>SMC</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -170,7 +157,7 @@
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
-				<string>Video card</string>
+				<string>GPU</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -243,8 +230,6 @@
 	</dict>
 	<key>Misc</key>
 	<dict>
-		<key>BlessOverride</key>
-		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleBehaviourOs</key>
@@ -296,8 +281,6 @@
 			<key>ScanPolicy</key>
 			<integer>983299</integer>
 		</dict>
-		<key>Tools</key>
-		<array/>
 	</dict>
 	<key>NVRAM</key>
 	<dict>
