@@ -11,9 +11,9 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * Intel Core i7 8700K (5GHz OC)
 * Asus ROG Maximus X Code
-* 4×8GB Samsung M378A1K43BB2-CRC (3600MHz OC)
+* 2×16GB Crucial Ballistix LT 3200MHz (3600MHz@cl16)
 * M.2 NVME MyDigitalSSD SBX 120GB (macOS)
-* *WiFi+BT combo module is still in transit*
+* Dell Wireless 1820A (DW1820A) 802.11ac WLAN + Bluetooth 4.1 (DW1820A, P/N: CN-0VW3T3, 14e4:43a3/106b:0023)
 
 ## Before you start make sure you have
 
@@ -40,10 +40,12 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * USBROGMaximusXCode.kext - Plist-only kext for USB port mapping
 * [IntelMausi.kext][8] - Another intel driver for Ethernet
+* [AirportBrcmFixup.kext][11] - Broadcom Wifi fix
 * [VoodooHDA.kext][2] - Getting audio to work as easy-peasy
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][5] - Need for GPU support
+* [BrcmFirmwareData.kext + BrcmPatchRAM2.kext][12] - Firmware and patch for bluetooth fix
 
 ### EFI drivers
 
@@ -56,6 +58,7 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 ## Issues
 
 1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][101]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
+2. Important! In `config.plist` please replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
 
 ## USB ports mapping
 
@@ -82,6 +85,10 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 28/10/2019
+* Replaced Realtek wifi combo module with Dell Wireless 1820A
+* Set `csr-active-config` to disable `SIP`
+* Updated BIOS to version 2203
 ###### 11/10/2019
 * Fixed HECI device
 * Fixed \_DSM method injection
@@ -108,6 +115,9 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [8]: https://github.com/acidanthera/IntelMausi
 [9]: https://github.com/acidanthera/AppleSupportPkg
 [10]: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/
+[11]: https://github.com/acidanthera/AirportBrcmFixup
+[12]: https://github.com/acidanthera/BrcmPatchRAM
+[13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
 
 [101]: https://i.imgur.com/eTJDKaB.jpg
 
