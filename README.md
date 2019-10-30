@@ -40,7 +40,6 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * USBROGMaximusXCode.kext - Plist-only kext for USB port mapping
 * [IntelMausi.kext][8] - Another intel driver for Ethernet
-* [AirportBrcmFixup.kext][11] - Broadcom Wifi fix
 * [VoodooHDA.kext][2] - Getting audio to work as easy-peasy
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
@@ -85,6 +84,9 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 30/10/2019
+* Looks WIFI module works OOB for this devid=14e4:43a3 with `BrcmNIC` driver
+* Removed `AirportBrcmFixup.kext`
 ###### 28/10/2019
 * Replaced Realtek wifi combo module with Dell Wireless 1820A
 * Set `csr-active-config` to disable `SIP`
