@@ -47,7 +47,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][5] - Need for GPU support
-* [AirportBrcmFixup.kext][11] - Loader for `Brcm4331` driver for wifi
+* [AirportBrcmFixup.kext][11] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
 * [BrcmFirmwareData.kext + BrcmPatchRAM2.kext][12] - Firmware and patch for bluetooth fix
 
 ### EFI drivers
@@ -90,7 +90,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 ## Chnagelog
 ###### 7/11/2019
 * VoodooHDA tweaks
-* Returning `AirportBrcmFixup.kext` due to several kernel panics on `BrcmNIC`
+* Returning `AirportBrcmFixup.kext` to use `Brcm4360` instead of `BrcmNIC` due to several kernel panics
 * Cleanup drivers and kexts, must be downloaded separately
 ###### 30/10/2019
 * Looks WIFI module works OOB for this devid=14e4:43a3 with `BrcmNIC` driver
