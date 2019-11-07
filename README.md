@@ -18,8 +18,9 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 ## Before you start make sure you have
 
 * Working hardware
-* Last motherboard BIOS version
-* Fresh OpenCore with filled `PlatformInfo > Generic` section in config.plist *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
+* [BIOS][15] version `>= 2102`
+* Actual [OpenCore][1] `>= 0.5.1`
+* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14]. *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
 
 # Installation
 
@@ -127,6 +128,8 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [11]: https://github.com/acidanthera/AirportBrcmFixup
 [12]: https://github.com/acidanthera/BrcmPatchRAM
 [13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+[14]: https://github.com/acidanthera/MacInfoPkg
+[15]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
 
 [101]: https://i.imgur.com/eTJDKaB.jpg
 
