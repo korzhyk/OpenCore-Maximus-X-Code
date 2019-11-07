@@ -1,4 +1,4 @@
-# Hackintosh on Asus ROG Maximus X Code
+# Hackintosh on Asus ROG Maximus X Code via [OpenCore][1]
 
 <p align="center">
   <img src="https://i.imgur.com/YNuOG3x.png" alt="About this mac specs">
