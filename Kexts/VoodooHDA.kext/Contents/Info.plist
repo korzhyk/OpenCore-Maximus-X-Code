@@ -66,21 +66,33 @@
 			<false/>
 			<key>MixerValues</key>
 			<dict>
-				<key>Mic</key>
+				<key>Line</key>
 				<integer>90</integer>
+				<key>Mic</key>
+				<integer>75</integer>
 				<key>Monitor</key>
 				<integer>90</integer>
 				<key>PCM</key>
 				<integer>95</integer>
 				<key>Rec</key>
-				<integer>80</integer>
+				<integer>90</integer>
 				<key>iGain</key>
 				<integer>90</integer>
 				<key>iMix</key>
-				<integer>95</integer>
+				<integer>75</integer>
 			</dict>
 			<key>NodesToPatch</key>
 			<array>
+				<dict>
+					<key>Codec</key>
+					<integer>0</integer>
+					<key>Comment</key>
+					<string>Disable beep</string>
+					<key>Enable</key>
+					<string>0</string>
+					<key>Node</key>
+					<integer>29</integer>
+				</dict>
 				<dict>
 					<key>Codec</key>
 					<integer>0</integer>
