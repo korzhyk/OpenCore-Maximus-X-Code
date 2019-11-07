@@ -36,6 +36,8 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 ## What's behind the scenes
 
+You must download all not bundled kexts and drivers from repositories by yourself.
+
 ### Kexts
 
 * USBROGMaximusXCode.kext - Plist-only kext for USB port mapping
@@ -86,9 +88,9 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 
 ## Chnagelog
 ###### 7/11/2019
-* Updated kexts to actual versions
 * VoodooHDA tweaks
 * Returning `AirportBrcmFixup.kext` due to several kernel panics on `BrcmNIC`
+* Cleanup drivers and kexts, must be downloaded separately
 ###### 30/10/2019
 * Looks WIFI module works OOB for this devid=14e4:43a3 with `BrcmNIC` driver
 * Removed `AirportBrcmFixup.kext`
