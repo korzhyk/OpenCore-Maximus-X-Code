@@ -44,6 +44,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][5] - Need for GPU support
+* [AirportBrcmFixup.kext][11] - Loader for `Brcm4331` driver for wifi
 * [BrcmFirmwareData.kext + BrcmPatchRAM2.kext][12] - Firmware and patch for bluetooth fix
 
 ### EFI drivers
@@ -57,7 +58,7 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 ## Issues
 
 1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][101]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
-2. Important! In `config.plist` please replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
+2. Important! In `config.plist`, please, replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
 
 ## USB ports mapping
 
@@ -84,6 +85,10 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 7/11/2019
+* Updated kexts to actual versions
+* VoodooHDA tweaks
+* Returning `AirportBrcmFixup.kext` due to several kernel panics on `BrcmNIC`
 ###### 30/10/2019
 * Looks WIFI module works OOB for this devid=14e4:43a3 with `BrcmNIC` driver
 * Removed `AirportBrcmFixup.kext`
