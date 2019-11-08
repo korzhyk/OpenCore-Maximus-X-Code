@@ -48,7 +48,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][5] - Need for GPU support
 * [AirportBrcmFixup.kext][11] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
-* [BrcmFirmwareData.kext + BrcmPatchRAM2.kext][12] - Firmware and patch for bluetooth fix
+* [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][12] - Firmware and patch for bluetooth fix
 
 ### EFI drivers
 
@@ -88,6 +88,8 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 9/11/2019
+* Now using more efficient way to fix bluetooth with `BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext`
 ###### 7/11/2019
 * VoodooHDA tweaks
 * Returning `AirportBrcmFixup.kext` to use `Brcm4360` instead of `BrcmNIC` due to several kernel panics
