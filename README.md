@@ -88,6 +88,8 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 10/12/2019
+* Updated config complies with OpenCore v0.5.3
 ###### 9/11/2019
 * Now using more efficient way to fix bluetooth with `BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext`
 ###### 7/11/2019
