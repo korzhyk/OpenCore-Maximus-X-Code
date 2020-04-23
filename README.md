@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * Working hardware
 * [BIOS][15] version `>= 2102`
-* Actual [OpenCore][1] `>= 0.5.5`
+* Actual [OpenCore][1] `= 0.5.7`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14]. *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
 
 # Installation
@@ -88,6 +88,10 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 23/4/2020
+* Update config for OpenCore v0.5.7
+* Removed DTGP method from `SSDT-EXT.aml`
+* Updated references in `README.md`
 ###### 6/2/2020
 * No changes, current config can be used with OpenCore v0.5.5
 ###### 10/12/2019
@@ -127,10 +131,10 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [4]: https://github.com/acidanthera/VirtualSMC
 [5]: https://github.com/acidanthera/WhateverGreen
 [6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
-[7]: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/config.plist/coffee-lake#platforminfo
+[7]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html#platforminfo
 [8]: https://github.com/acidanthera/IntelMausi
 [9]: https://github.com/acidanthera/AppleSupportPkg
-[10]: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/
+[10]: https://dortania.github.io/OpenCore-Desktop-Guide/
 [11]: https://github.com/acidanthera/AirportBrcmFixup
 [12]: https://github.com/acidanthera/BrcmPatchRAM
 [13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
