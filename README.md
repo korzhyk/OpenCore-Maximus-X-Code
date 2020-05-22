@@ -1,8 +1,8 @@
 # Hackintosh on Asus ROG Maximus X Code via [OpenCore][1]
 
-<p align="center">
-  <img src="https://i.imgur.com/YNuOG3x.png" alt="About this mac specs">
-</p>
+![About this mac][System Info]
+
+*macOS Supported:* **10.13+**
 
 *Mojave nVidia webdriver not avaliable yet :cry:* :idea: But you can use a High Sierra, why not?
 This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * Working hardware
 * [BIOS][15] version `>= 2102`
-* Actual [OpenCore][1] `= 0.5.7`
+* Actual [OpenCore][1] `= 0.5.8`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14]. *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
 
 # Installation
@@ -52,15 +52,11 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 
 ### EFI drivers
 
-* ApfsDriverLoader.efi - Must have to run 10.13.6+
-* FwRuntimeServices.efi - Must have to work with native NVRAM
 * ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][6].
-
-All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `VBoxHfs.efi`
 
 ## Issues
 
-1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][101]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
+1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][USB map]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
 2. Important! In `config.plist`, please, replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
 
 ## USB ports mapping
@@ -88,6 +84,10 @@ All drivers are from [AppleSupportPkg][9], there also contains driver for HFS+ `
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 22/5/2020
+* Update config for OpenCore v0.5.8
+* Removed `ApfsDriverLoader.efi`, already bundled in OpenCore v0.5.8
+* Added `UEFI → APFS` section in `config.plist`
 ###### 23/4/2020
 * Update config for OpenCore v0.5.7
 * Removed DTGP method from `SSDT-EXT.aml`
@@ -133,7 +133,6 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
 [7]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html#platforminfo
 [8]: https://github.com/acidanthera/IntelMausi
-[9]: https://github.com/acidanthera/AppleSupportPkg
 [10]: https://dortania.github.io/OpenCore-Desktop-Guide/
 [11]: https://github.com/acidanthera/AirportBrcmFixup
 [12]: https://github.com/acidanthera/BrcmPatchRAM
@@ -141,5 +140,5 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [14]: https://github.com/acidanthera/MacInfoPkg
 [15]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
 
-[101]: https://i.imgur.com/eTJDKaB.jpg
-
+[USB map]: https://i.imgur.com/eTJDKaB.jpg
+[System Info]: https://i.imgur.com/YNuOG3x.png
