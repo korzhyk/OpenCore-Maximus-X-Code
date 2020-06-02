@@ -216,8 +216,6 @@
 	<dict>
 		<key>Boot</key>
 		<dict>
-			<key>HideSelf</key>
-			<true/>
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
@@ -286,7 +284,7 @@
 				</data>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>

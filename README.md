@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * Working hardware
 * [BIOS][15] version `>= 2102`
-* Actual [OpenCore][1] `= 0.5.8`
+* Actual [OpenCore][1] `= 0.5.9`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14]. *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
 
 # Installation
@@ -84,6 +84,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 2/6/2020
+* Update config for OpenCore v0.5.9
 ###### 22/5/2020
 * Update config for OpenCore v0.5.8
 * Removed `ApfsDriverLoader.efi`, already bundled in OpenCore v0.5.8
