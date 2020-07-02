@@ -43,7 +43,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 
 * USBROGMaximusXCode.kext - Plist-only kext for USB port mapping
 * [IntelMausi.kext][8] - Another intel driver for Ethernet
-* [VoodooHDA.kext][2] - Getting audio to work as easy-peasy
+* [AppleALC.kext][2] - Getting audio to work as easy-peasy
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][5] - Need for GPU support
@@ -86,6 +86,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 ## Chnagelog
 ###### 2/7/2020
 * Fix ids for `UHD630`
+* Move from `VoodooHDA` to `AppleALC`
 ###### 2/6/2020
 * Update config for OpenCore v0.5.9
 ###### 22/5/2020
@@ -130,7 +131,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 * The initial push to GitHub
 
 [1]: https://github.com/acidanthera/OpenCorePkg
-[2]: https://sourceforge.net/projects/voodoohda/
+[2]: https://github.com/acidanthera/AppleALC
 [3]: https://github.com/acidanthera/Lilu
 [4]: https://github.com/acidanthera/VirtualSMC
 [5]: https://github.com/acidanthera/WhateverGreen
