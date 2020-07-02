@@ -84,6 +84,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 2/7/2020
+* Fix ids for `UHD630`
 ###### 2/6/2020
 * Update config for OpenCore v0.5.9
 ###### 22/5/2020
