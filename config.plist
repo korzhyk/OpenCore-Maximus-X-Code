@@ -70,11 +70,15 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AwCSPg==
+				AACbPg==
 				</data>
-				<key>device-id</key>
+				<key>framebuffer-patch-enable</key>
 				<data>
-				kj4AAA==
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
 				</data>
 			</dict>
 		</dict>

@@ -2,7 +2,7 @@
 
 ![About this mac][System Info]
 
-*macOS Supported:* **10.13+**
+*macOS Supported:* **10.14+**
 
 *Mojave nVidia webdriver not avaliable yet :cry:* :idea: But you can use a High Sierra, why not?
 This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
@@ -85,7 +85,11 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 
 ## Chnagelog
 ###### 7/7/2020
+* Moved to macOS Catalina (10.15.5)
+* High Sierra support dropped
 * Add debug options
+* Removed fake `device-id` for IGPU
+* Added device properties for IGPU
 ###### 2/7/2020
 * Fix ids for `UHD630`
 * Move from `VoodooHDA` to `AppleALC`
@@ -148,4 +152,4 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [15]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
 
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
-[System Info]: https://i.imgur.com/YNuOG3x.png
+[System Info]: https://i.imgur.com/CNFkOnI.png
