@@ -84,6 +84,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 10/7/2020
+* Changed mac model to iMac18,1
 ###### 7/7/2020
 * Moved to macOS Catalina (10.15.5)
 * High Sierra support dropped
