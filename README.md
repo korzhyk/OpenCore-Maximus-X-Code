@@ -4,6 +4,7 @@
 
 *macOS Supported:* **10.14+**
 
+*Mojave nVidia webdriver not avaliable yet :cry:* :idea: But you can use a High Sierra, why not?
 This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
 
 ## Hardware configuration
@@ -19,7 +20,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 * Working hardware
 * [BIOS][15] version `>= 2102`
 * Actual [OpenCore][1] `= 0.5.9`
-* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [OpenCore Utilities][1].
+* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14]. *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
 
 # Installation
 
@@ -27,7 +28,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 * *Exit* → Load Optimized Defaults [Yes]
 * *Advanced* → System Agent (SA) Configuration → VT-d [**Enabled**]
-* *Advanced* → System Agent (SA) Configuration → Primary Display [**IGPU**]
+* *Advanced* → System Agent (SA) Configuration → Primary Display [**PEG**]
 * *Advanced* → System Agent (SA) Configuration → DVMT Pre-Allocated [**64M**]
 * *Advanced* → USB Configuration → Legacy USB Support [**Disabled**]
 * *Advanced* → CPU Configuration → Intel Virtualization Technology [**Enabled**]
@@ -45,7 +46,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 * [AppleALC.kext][2] - Getting audio to work as easy-peasy
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
-* [WhateverGreen.kext][5] - Need for iGPU
+* [WhateverGreen.kext][5] - Need for GPU support
 * [AirportBrcmFixup.kext][11] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
 * [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][12] - Firmware and patch for bluetooth fix
 
@@ -57,7 +58,6 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 
 1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][USB map]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
 2. Important! In `config.plist`, please, replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
-3. No video output over HDMI connector after boot
 
 ## USB ports mapping
 
@@ -84,13 +84,12 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
-###### 8/7/2020
-* Update USB-plist kext
-* Change mac-model `iMac18,3` → `iMac19,1`
 ###### 7/7/2020
 * Moved to macOS Catalina (10.15.5)
 * High Sierra support dropped
 * Add debug options
+* Removed fake `device-id` for IGPU
+* Added device properties for IGPU
 ###### 2/7/2020
 * Fix ids for `UHD630`
 * Move from `VoodooHDA` to `AppleALC`

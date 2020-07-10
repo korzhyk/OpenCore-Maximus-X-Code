@@ -66,6 +66,25 @@
 				<key>compatible</key>
 				<string>pci14e4,4353</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				BwCbPg==
+				</data>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+			</dict>
 		</dict>
 	</dict>
 	<key>Kernel</key>
@@ -285,16 +304,16 @@
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
-			<key>SpoofVendor</key>
-			<true/>
-			<key>SystemProductName</key>
-			<string>iMac19,1</string>
 			<key>MLB</key>
 			<string>M0000000000000000</string>
 			<key>ROM</key>
 			<data>
 			AAAAAAAA
 			</data>
+			<key>SpoofVendor</key>
+			<true/>
+			<key>SystemProductName</key>
+			<string>iMac18,3</string>
 			<key>SystemSerialNumber</key>
 			<string>C00000000000</string>
 			<key>SystemUUID</key>
