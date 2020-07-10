@@ -24,7 +24,7 @@
 	<string>1.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>iMac18,3-XHC</key>
+		<key>iMac18,1-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBMergeNub</string>
@@ -182,7 +182,7 @@
 				</dict>
 			</dict>
 			<key>model</key>
-			<string>iMac18,3</string>
+			<string>iMac18,1</string>
 		</dict>
 	</dict>
 	<key>OSBundleCompatibleVersion</key>
