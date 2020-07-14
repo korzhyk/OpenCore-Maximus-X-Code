@@ -4,7 +4,6 @@
 
 *macOS Supported:* **10.14+**
 
-*Mojave nVidia webdriver not avaliable yet :cry:* :idea: But you can use a High Sierra, why not?
 This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
 
 ## Hardware configuration
