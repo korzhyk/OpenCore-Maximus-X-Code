@@ -40,7 +40,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 
 ### Kexts
 
-* USBROGMaximusXCode.kext - Plist-only kext for USB port mapping
+* Legacy_USB3.kext - Plist-only kext for USB port mapping
 * [IntelMausi.kext][8] - Another intel driver for Ethernet
 * [AppleALC.kext][2] - Getting audio to work as easy-peasy
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
@@ -83,6 +83,10 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 17/7/2020
+* Updated config
+* Updated SSDT
+* Revert `Legacy_USB3.kext` naming
 ###### 10/7/2020
 * Changed mac model to iMac18,1
 ###### 7/7/2020

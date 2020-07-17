@@ -9,7 +9,7 @@
 	<key>CFBundleGetInfoString</key>
 	<string>1.0, Copyright © 2000-2014 Apple Inc. All Rights Reserved.</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.driver.usb.USBROGMaximusXCode</string>
+	<string>com.apple.driver.usb.Legacy_USB3</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -36,8 +36,6 @@
 			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
-				<key>kUSBMuxEnabled</key>
-				<true/>
 				<key>port-count</key>
 				<data>
 				EgAAAA==
