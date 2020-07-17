@@ -57,6 +57,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 
 1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][USB map]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
 2. Important! In `config.plist`, please, replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
+3. No video output through HDMI cable (IGPU).
 
 ## USB ports mapping
 
@@ -87,6 +88,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 * Updated config
 * Updated SSDT
 * Revert `Legacy_USB3.kext` naming
+* macOS update to 10.15.6
 ###### 10/7/2020
 * Changed mac model to iMac18,1
 ###### 7/7/2020
@@ -157,4 +159,4 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [15]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
 
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
-[System Info]: https://i.imgur.com/CNFkOnI.png
+[System Info]: https://i.imgur.com/ZfVFyTH.png
