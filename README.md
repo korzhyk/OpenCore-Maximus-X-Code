@@ -8,7 +8,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 
 ## Hardware configuration
 
-* Intel Core i7 8700K (5GHz OC)
+* Intel Core i7 8700K (5GHz OC) UHD630
 * Asus ROG Maximus X Code
 * 2×16GB Crucial Ballistix LT 3200MHz (3600MHz@cl16)
 * M.2 NVME MyDigitalSSD SBX 120GB (macOS)
@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any kernel panic
 * Working hardware
 * [BIOS][15] version `>= 2102`
 * Actual [OpenCore][1] `= 0.5.9`
-* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14]. *if you are using a external GPU use mac Model 18,3 in another cases use 18,1*
+* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14].
 
 # Installation
 
@@ -84,6 +84,9 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 4/8/2020
+* Update config for OpenCore v0.6.0
+* Changed mac model to iMac19,1
 ###### 17/7/2020
 * Updated config
 * Updated SSDT
