@@ -4,7 +4,7 @@
 
 *macOS Supported:* **10.14+**
 
-This is light configuration to run macOS smoothly. I didn't get any kernel panics science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
+This is light configuration to run macOS smoothly. I didn't get any [kernel panics][uptime] science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
 
 ## Hardware configuration
 
@@ -165,3 +165,4 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
 [System Info]: https://i.imgur.com/P5HNTzj.png
+[uptime]: https://i.imgur.com/OGl5UDI.png
