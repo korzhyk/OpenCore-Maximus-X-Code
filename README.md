@@ -18,7 +18,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * Working hardware
 * [BIOS][15] version `>= 2102`
-* Actual [OpenCore][1] `= 0.5.9`
+* Actual [OpenCore][1] `= 0.6.1`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14].
 
 # Installation
@@ -84,6 +84,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 8/9/2020
+* Update config for OpenCore v0.6.1
 ###### 14/8/2020
 * Minor changes in SSDT-EXT.aml
 ###### 4/8/2020
