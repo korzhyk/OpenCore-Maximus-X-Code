@@ -18,7 +18,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * Working hardware
 * [BIOS][15] version `>= 2102`
-* Actual [OpenCore][1] `= 0.6.1`
+* Actual [OpenCore][1] `= 0.6.2`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14].
 
 # Installation
@@ -47,7 +47,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 * [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][5] - Need for GPU support
 * [AirportBrcmFixup.kext][11] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
-* [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][12] - Firmware and patch for bluetooth fix
+* [BrcmFirmwareData.kext + BrcmPatchRAM2.kext][12] - Firmware and patch for bluetooth fix for OS < 10.15
+* [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][12] - Firmware and patch for bluetooth fix for OS >= 10.15
 
 ### EFI drivers
 
@@ -84,6 +85,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 5/10/2020
+* Update config for OpenCore v0.6.2
 ###### 8/9/2020
 * Update config for OpenCore v0.6.1
 ###### 14/8/2020

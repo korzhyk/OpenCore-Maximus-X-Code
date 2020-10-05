@@ -15,34 +15,76 @@
 				<string>SSDT-EXT.aml</string>
 			</dict>
 		</array>
+		<key>Delete</key>
+		<array/>
 		<key>Patch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
 				<string>SAT0 to SATA</string>
+				<key>Count</key>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
 				U0FUMA==
 				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
 				<key>Replace</key>
 				<data>
 				U0FUQQ==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>_DSM to ZDSM</string>
+				<key>Count</key>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
 				X0RTTQ==
 				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
 				<key>Replace</key>
 				<data>
 				WkRTTQ==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
 				</data>
 			</dict>
 		</array>
@@ -62,6 +104,8 @@
 	</dict>
 	<key>Booter</key>
 	<dict>
+		<key>MmioWhitelist</key>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>AvoidRuntimeDefrag</key>
@@ -101,12 +145,19 @@
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
-	<dict/>
+	<dict>
+		<key>Add</key>
+		<dict/>
+		<key>Delete</key>
+		<dict/>
+	</dict>
 	<key>Kernel</key>
 	<dict>
 		<key>Add</key>
 		<array>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>Lilu.kext</string>
 				<key>Comment</key>
@@ -123,6 +174,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>Comment</key>
@@ -139,6 +192,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
@@ -155,6 +210,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
@@ -171,6 +228,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>IntelMausi.kext</string>
 				<key>Comment</key>
@@ -187,6 +246,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>Legacy_USB3.kext</string>
 				<key>Comment</key>
@@ -203,6 +264,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext</string>
 				<key>Comment</key>
@@ -211,22 +274,70 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportBrcmFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>BrcmBluetoothInjector.kext</string>
+				<string>BrcmFirmwareData.kext</string>
 				<key>Comment</key>
-				<string>Bluetooth Injector</string>
+				<string>Bluetooth Firmware</string>
 				<key>Enabled</key>
 				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrcmFirmwareData</string>
+				<key>MaxKernel</key>
+				<string>19.0.0</string>
 				<key>MinKernel</key>
 				<string>15.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>BrcmPatchRAM2.kext</string>
+				<key>Comment</key>
+				<string>Bluetooth Patch</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrcmPatchRAM2</string>
+				<key>MaxKernel</key>
+				<string>19.0.0</string>
+				<key>MinKernel</key>
+				<string>15.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>BrcmBluetoothInjector.kext</string>
+				<key>Comment</key>
+				<string>Bluetooth Injector</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string>99.0.0</string>
+				<key>MinKernel</key>
+				<string>19.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>BrcmPatchRAM3.kext</string>
 				<key>Comment</key>
@@ -235,12 +346,35 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BrcmPatchRAM3</string>
+				<key>MaxKernel</key>
+				<string>99.0.0</string>
 				<key>MinKernel</key>
-				<string>15.0.0</string>
+				<string>19.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
 		</array>
+		<key>Block</key>
+		<array/>
+		<key>Emulate</key>
+		<dict>
+			<key>Cpuid1Data</key>
+			<data>
+			</data>
+			<key>Cpuid1Mask</key>
+			<data>
+			</data>
+			<key>DummyPowerManagement</key>
+			<false/>
+			<key>MaxKernel</key>
+			<string></string>
+			<key>MinKernel</key>
+			<string></string>
+		</dict>
+		<key>Force</key>
+		<array/>
+		<key>Patch</key>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
@@ -255,15 +389,19 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableLinkeditJettison</key>
+			<false/>
 			<key>DisableRtcChecksum</key>
 			<false/>
-			<key>DummyPowerManagement</key>
+			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
+			<false/>
+			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
 			<true/>
@@ -274,9 +412,20 @@
 			<key>XhciPortLimit</key>
 			<false/>
 		</dict>
+		<key>Scheme</key>
+		<dict>
+			<key>FuzzyMatch</key>
+			<true/>
+			<key>KernelArch</key>
+			<string>x86_64</string>
+			<key>KernelCache</key>
+			<string>Auto</string>
+		</dict>
 	</dict>
 	<key>Misc</key>
 	<dict>
+		<key>BlessOverride</key>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -319,6 +468,8 @@
 			<key>Target</key>
 			<integer>67</integer>
 		</dict>
+		<key>Entries</key>
+		<array/>
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
@@ -339,8 +490,16 @@
 			<integer>6</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
+			<key>PasswordHash</key>
+			<data>
+			</data>
+			<key>PasswordSalt</key>
+			<data>
+			</data>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
+			<key>SecureBootModel</key>
+			<string>Default</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -431,6 +590,32 @@
 		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
+		<key>LegacySchema</key>
+		<dict>
+			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+			<array>
+				<string>EFILoginHiDPI</string>
+				<string>EFIBluetoothDelay</string>
+				<string>LocationServicesEnabled</string>
+				<string>SystemAudioVolume</string>
+				<string>SystemAudioVolumeDB</string>
+				<string>SystemAudioVolumeSaved</string>
+				<string>bluetoothActiveControllerInfo</string>
+				<string>bluetoothInternalControllerInfo</string>
+				<string>flagstate</string>
+				<string>fmm-computer-name</string>
+				<string>nvda_drv</string>
+				<string>prev-lang:kbd</string>
+			</array>
+			<key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
+			<array>
+				<string>Boot0080</string>
+				<string>Boot0081</string>
+				<string>Boot0082</string>
+				<string>BootNext</string>
+				<string>BootOrder</string>
+			</array>
+		</dict>
 		<key>WriteFlash</key>
 		<true/>
 	</dict>
@@ -444,8 +629,15 @@
 			<false/>
 			<key>MLB</key>
 			<string>M0000000000000000</string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
+			<key>ROM</key>
+			<data>
+			</data>
 			<key>SpoofVendor</key>
 			<true/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
@@ -617,6 +809,8 @@
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
+		<key>ReservedMemory</key>
+		<array/>
 	</dict>
 </dict>
 </plist>
