@@ -169,5 +169,5 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [15]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
 
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
-[System Info]: https://i.imgur.com/P5HNTzj.png
+[System Info]: https://i.imgur.com/hgdywYt.png
 [uptime]: https://i.imgur.com/OGl5UDI.png
