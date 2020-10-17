@@ -293,9 +293,9 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BrcmFirmwareData</string>
 				<key>MaxKernel</key>
-				<string>19.0.0</string>
+				<string></string>
 				<key>MinKernel</key>
-				<string>15.0.0</string>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -321,13 +321,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>BrcmBluetoothInjector.kext</string>
+				<string>BrcmPatchRAM3.kext</string>
 				<key>Comment</key>
-				<string>Bluetooth Injector</string>
+				<string>Bluetooth Patch</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string></string>
+				<string>Contents/MacOS/BrcmPatchRAM3</string>
 				<key>MaxKernel</key>
 				<string>99.0.0</string>
 				<key>MinKernel</key>
@@ -339,13 +339,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>BrcmPatchRAM3.kext</string>
+				<string>BrcmBluetoothInjector.kext</string>
 				<key>Comment</key>
-				<string>Bluetooth Patch</string>
+				<string>Bluetooth Injector</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrcmPatchRAM3</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string>99.0.0</string>
 				<key>MinKernel</key>
