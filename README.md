@@ -8,7 +8,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 ## Hardware configuration
 
-* Intel Core i7 8700K (5GHz OC) UHD630
+* Intel Core i7 8700K (5GHz OC) UHD630 (Geekbench 5: [CPU][GB_CPU]/[OpenCL][GB_OCL]/[Metal][GB_MTL])
 * Asus ROG Maximus X Code
 * 2×16GB Crucial Ballistix LT 3200MHz (3600MHz@cl16)
 * M.2 NVME MyDigitalSSD SBX 120GB (macOS)
@@ -171,3 +171,6 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
 [System Info]: https://i.imgur.com/hgdywYt.png
 [uptime]: https://i.imgur.com/OGl5UDI.png
+[GB_CPU]: https://browser.geekbench.com/v5/cpu/4261705
+[GB_OCL]: https://browser.geekbench.com/v5/compute/1671254
+[GB_MTL]: https://browser.geekbench.com/v5/compute/1671274
