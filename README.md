@@ -1,25 +1,26 @@
-# Hackintosh on Asus ROG Maximus X Code via [OpenCore][1]
+# Hackintosh on Asus ROG Maximus X Code via [OpenCore][OC]
 
 ![About this mac][System Info]
 
 *macOS Supported:* **10.14+**
 
-This is light configuration to run macOS smoothly. I didn't get any [kernel panics][uptime] science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][10].
+This is light configuration to run macOS smoothly. I didn't get any [kernel panics][uptime] science after macOS install. This config is base on [OpenCore Vanilla Desktop Guide][Guide].
 
 ## Hardware configuration
 
 * Intel Core i7 8700K (5GHz OC) UHD630 (Geekbench 5: [CPU][GB_CPU]/[OpenCL][GB_OCL]/[Metal][GB_MTL])
 * Asus ROG Maximus X Code
 * 2×16GB Crucial Ballistix LT 3200MHz (3600MHz@cl16)
-* M.2 NVME MyDigitalSSD SBX 120GB (macOS)
+* M.2 NVME MyDigitalSSD SBX 120GB (macOS Catalina)
+* SATA Micron M600 512GB (macOS Mojave)
 * Dell Wireless 1820A (DW1820A) 802.11ac WLAN + Bluetooth 4.1 (DW1820A, P/N: CN-0VW3T3, 14e4:43a3/106b:0023)
 
 ## Before you start make sure you have
 
 * Working hardware
-* [BIOS][15] version `>= 2102`
-* Actual [OpenCore][1] `= 0.6.2`
-* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` from [MacInfoPkg][14].
+* [BIOS][BIOS] version `>= 2102`
+* Actual [OpenCore][OC] `= 0.6.2`
+* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` tool from [OpenCore][OC] utilities.
 
 # Installation
 
@@ -41,23 +42,24 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 ### Kexts
 
 * Legacy_USB3.kext - Plist-only kext for USB port mapping
-* [IntelMausi.kext][8] - Another intel driver for Ethernet
-* [AppleALC.kext][2] - Getting audio to work as easy-peasy
-* [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
-* [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
-* [WhateverGreen.kext][5] - Need for GPU support
-* [AirportBrcmFixup.kext][11] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
-* [BrcmFirmwareData.kext + BrcmPatchRAM2.kext][12] - Firmware and patch for bluetooth fix for OS < 10.15
-* [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][12] - Firmware and patch for bluetooth fix for OS >= 10.15
+* [IntelMausi.kext][IntelMausi] - Another intel driver for Ethernet
+* [AppleALC.kext][AppleALC] - Getting audio to work as easy-peasy
+* [Lilu.kext][Lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
+* [VirtualSMC.kext][VirtualSMC] - A advanced replacement of FakeSMC, almost like native mac SMC.
+* [WhateverGreen.kext][WG] - Need for GPU support (even for disabling discrete GPU)
+* [AirportBrcmFixup.kext][WIFI] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
+* [BrcmFirmwareData.kext][BT] - Firmwares for various bluetooth devices
+* [BrcmPatchRAM2.kext][BT] - Patch bluetooth for OS < 10.15
+* [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][BT] - Bluetooth patch and firmware injector for OS >= 10.15
 
 ### EFI drivers
 
-* ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][6].
+* ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][FV2].
 
 ## Issues
 
 1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][USB map]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
-2. Important! In `config.plist`, please, replace `#a` value for key `brcmfx-country` with your [ISO 3166-1 alpha-2 country code][13] for compliant with your country frequency limitations.
+2. Important! In `SSDT-EXT.aml` (using [MaciASL][MaciASL]), please, replace `#a` value for key `brcmfx-country` with your [country code][ISO_county_codes] for compliant with your country frequency limitations.
 3. No video output through HDMI cable (IGPU).
 
 ## USB ports mapping
@@ -153,24 +155,22 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 ###### 07/10/2019
 * The initial push to GitHub
 
-[1]: https://github.com/acidanthera/OpenCorePkg
-[2]: https://github.com/acidanthera/AppleALC
-[3]: https://github.com/acidanthera/Lilu
-[4]: https://github.com/acidanthera/VirtualSMC
-[5]: https://github.com/acidanthera/WhateverGreen
-[6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
-[7]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html#platforminfo
-[8]: https://github.com/acidanthera/IntelMausi
-[10]: https://dortania.github.io/OpenCore-Desktop-Guide/
-[11]: https://github.com/acidanthera/AirportBrcmFixup
-[12]: https://github.com/acidanthera/BrcmPatchRAM
-[13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
-[14]: https://github.com/acidanthera/MacInfoPkg
-[15]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
-
-[USB map]: https://i.imgur.com/eTJDKaB.jpg
+[AppleALC]: https://github.com/acidanthera/AppleALC
+[BIOS]: https://www.asus.com/Motherboards/ROG-MAXIMUS-X-CODE/HelpDesk_BIOS/
+[BT]: https://github.com/acidanthera/BrcmPatchRAM
+[FV2]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
+[GB_CPU]: https://browser.geekbench.com/v5/cpu/4261705
+[GB_MTL]: https://browser.geekbench.com/v5/compute/1671274
+[GB_OCL]: https://browser.geekbench.com/v5/compute/1671254
+[Guide]: https://dortania.github.io/OpenCore-Desktop-Guide/
+[IntelMausi]: https://github.com/acidanthera/IntelMausi
+[ISO_county_codes]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+[Lilu]: https://github.com/acidanthera/Lilu
+[MaciASL]: https://github.com/acidanthera/MaciASL
+[OC]: https://github.com/acidanthera/OpenCorePkg
 [System Info]: https://i.imgur.com/hgdywYt.png
 [uptime]: https://i.imgur.com/OGl5UDI.png
-[GB_CPU]: https://browser.geekbench.com/v5/cpu/4261705
-[GB_OCL]: https://browser.geekbench.com/v5/compute/1671254
-[GB_MTL]: https://browser.geekbench.com/v5/compute/1671274
+[USB map]: https://i.imgur.com/eTJDKaB.jpg
+[VirtualSMC]: https://github.com/acidanthera/VirtualSMC
+[WG]: https://github.com/acidanthera/WhateverGreen
+[WIFI]: https://github.com/acidanthera/AirportBrcmFixup
