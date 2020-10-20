@@ -27,7 +27,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * *Exit* → Load Optimized Defaults [Yes]
 * *Advanced* → System Agent (SA) Configuration → VT-d [**Enabled**]
-* *Advanced* → System Agent (SA) Configuration → Primary Display [**PEG**]
+* *Advanced* → System Agent (SA) Configuration → Primary Display [**IGPU**]
 * *Advanced* → System Agent (SA) Configuration → DVMT Pre-Allocated [**64M**]
 * *Advanced* → USB Configuration → Legacy USB Support [**Disabled**]
 * *Advanced* → CPU Configuration → Intel Virtualization Technology [**Enabled**]
