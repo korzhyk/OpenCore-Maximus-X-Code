@@ -60,7 +60,6 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 
 1. The limit of USB ports is `15` but it counts not only physical but also protocol based. So if one physical port can be used by two protocols such as 3.0 (SS) and 2.0 (HS), in this way in system he actually own two of fifteen addresses (eg. HS01/SS01). You can see the real USB mapping in this [picture][USB map]. Due to these limits I disable a internal `HS12` which utilized by AURA Sync. Also internal `HS11` port is utilized by Bluetooth from m.2 NGFF wifi+bt combo module. And keep in mind USB 3.1 ports such as Type-C, Type-A and header provided by ASMedia controller.
 2. Important! In `SSDT-EXT.aml` (using [MaciASL][MaciASL]), please, replace `#a` value for key `brcmfx-country` with your [country code][ISO_county_codes] for compliant with your country frequency limitations.
-3. No video output through HDMI cable (IGPU).
 
 ## USB ports mapping
 
@@ -87,6 +86,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 24/11/2020
+* HDMI video out fixed, I put HDMI cable to wrong port (DP) xD
 ###### 13/11/2020
 * Update config for OpenCore v0.6.3
 ###### 5/10/2020
