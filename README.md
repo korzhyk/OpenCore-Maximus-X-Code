@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * Working hardware
 * [BIOS][BIOS] version `>= 2102`
-* Actual [OpenCore][OC] `= 0.6.3`
+* Actual [OpenCore][OC] `= 0.6.4`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` tool from [OpenCore][OC] utilities.
 
 # Installation
@@ -86,6 +86,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 8/12/2020
+* Update config for OpenCore v0.6.4
 ###### 24/11/2020
 * HDMI video out fixed, I put HDMI cable to wrong port (DP) xD
 ###### 13/11/2020
@@ -171,7 +173,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [Lilu]: https://github.com/acidanthera/Lilu
 [MaciASL]: https://github.com/acidanthera/MaciASL
 [OC]: https://github.com/acidanthera/OpenCorePkg
-[System Info]: https://i.imgur.com/hgdywYt.png
+[System Info]: https://i.imgur.com/Dh2GW85.png
 [uptime]: https://i.imgur.com/OGl5UDI.png
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
 [VirtualSMC]: https://github.com/acidanthera/VirtualSMC
