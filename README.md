@@ -175,7 +175,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [Lilu]: https://github.com/acidanthera/Lilu
 [MaciASL]: https://github.com/acidanthera/MaciASL
 [OC]: https://github.com/acidanthera/OpenCorePkg
-[System Info]: https://i.imgur.com/Dh2GW85.png
+[System Info]: https://i.imgur.com/s7GMfPj.png
 [uptime]: https://i.imgur.com/OGl5UDI.png
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
 [VirtualSMC]: https://github.com/acidanthera/VirtualSMC
