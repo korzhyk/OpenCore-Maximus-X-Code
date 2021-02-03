@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * Working hardware
 * [BIOS][BIOS] version `>= 2102`
-* Actual [OpenCore][OC] `= 0.6.5`
+* Actual [OpenCore][OC] `= 0.6.6`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` tool from [OpenCore][OC] utilities.
 
 # Installation
