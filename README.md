@@ -30,6 +30,9 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 * *Advanced* → System Agent (SA) Configuration → VT-d [**Enabled**]
 * *Advanced* → System Agent (SA) Configuration → Primary Display [**IGPU**]
 * *Advanced* → System Agent (SA) Configuration → DVMT Pre-Allocated [**64M**]
+* *Advanced* → APM Configuration → ErP Ready [**Enable(S4+S5)**]
+* *Advanced* → Platform Misc Configuration → PCI Express Native Power Management [**Enable**]
+* *Advanced* → Platform Misc Configuration → Native ASPM [**Enable**]
 * *Advanced* → USB Configuration → Legacy USB Support [**Disabled**]
 * *Advanced* → CPU Configuration → Intel Virtualization Technology [**Enabled**]
 * *Boot* → Fast Boot [**Disabled**]
@@ -86,6 +89,9 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 2/3/2021
+* Update `SSDT_EXT.aml` to use `BCM4360` driver for WiFi adapter in Big Sur.
+* Update config for OpenCore v0.6.7
 ###### 2/2/2021
 * Update config for OpenCore v0.6.6
 ###### 6/1/2021
@@ -177,7 +183,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 [Lilu]: https://github.com/acidanthera/Lilu
 [MaciASL]: https://github.com/acidanthera/MaciASL
 [OC]: https://github.com/acidanthera/OpenCorePkg
-[System Info]: https://i.imgur.com/s7GMfPj.png
+[System Info]: https://i.imgur.com/GpBg91j.png
 [uptime]: https://i.imgur.com/OGl5UDI.png
 [USB map]: https://i.imgur.com/eTJDKaB.jpg
 [VirtualSMC]: https://github.com/acidanthera/VirtualSMC
