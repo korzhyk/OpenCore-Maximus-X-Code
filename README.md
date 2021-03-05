@@ -50,7 +50,7 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 * [Lilu.kext][Lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [VirtualSMC.kext][VirtualSMC] - A advanced replacement of FakeSMC, almost like native mac SMC.
 * [WhateverGreen.kext][WG] - Need for GPU support (even for disabling discrete GPU)
-* [AirportBrcmFixup.kext][WIFI] - Loader for `com.apple.driver.AirPort.Brcm4360` driver for wifi
+* [AirportBrcmFixup.kext][WIFI] - Loader for `com.apple.driver.AirPortDriverBrcmNIC` driver for wifi
 * [BrcmFirmwareData.kext][BT] - Firmwares for various bluetooth devices
 * [BrcmPatchRAM2.kext][BT] - Patch bluetooth for OS < 10.15
 * [BrcmBluetoothInjector.kext + BrcmPatchRAM3.kext][BT] - Bluetooth patch and firmware injector for OS >= 10.15
@@ -90,7 +90,7 @@ Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and t
 
 ## Chnagelog
 ###### 2/3/2021
-* Update `SSDT_EXT.aml` to use `BCM4360` driver for WiFi adapter in Big Sur.
+* Update `SSDT_EXT.aml` to use `BrcmNIC` driver for WiFi adapter in Big Sur.
 * Update config for OpenCore v0.6.7
 ###### 2/2/2021
 * Update config for OpenCore v0.6.6
