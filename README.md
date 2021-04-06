@@ -19,7 +19,7 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * Working hardware
 * [BIOS][BIOS] version `>= 2102`
-* Actual [OpenCore][OC] `= 0.6.6`
+* Actual [OpenCore][OC] `= 0.6.8`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial` tool from [OpenCore][OC] utilities.
 
 # Installation
@@ -28,9 +28,9 @@ This is light configuration to run macOS smoothly. I didn't get any [kernel pani
 
 * *Exit* → Load Optimized Defaults [Yes]
 * *Advanced* → System Agent (SA) Configuration → VT-d [**Enabled**]
-* *Advanced* → System Agent (SA) Configuration → Primary Display [**IGPU**]
+* *Advanced* → System Agent (SA) Configuration → Primary Display [**IGFX**]
 * *Advanced* → System Agent (SA) Configuration → DVMT Pre-Allocated [**64M**]
-* *Advanced* → APM Configuration → ErP Ready [**Enable(S4+S5)**]
+* *Advanced* → APM Configuration → ErP Ready [**Enable(S5)**]
 * *Advanced* → Platform Misc Configuration → PCI Express Native Power Management [**Enable**]
 * *Advanced* → Platform Misc Configuration → Native ASPM [**Enable**]
 * *Advanced* → USB Configuration → Legacy USB Support [**Disabled**]
@@ -89,6 +89,9 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 6/4/2021
+* Update config for OpenCore v0.6.8
+* Updated BIOS `2201 → 2503` decrease overall performance by ≈5% due to Meltdown and Spectre patches :(
 ###### 2/3/2021
 * Update `SSDT_EXT.aml` to use `BrcmNIC` driver for WiFi adapter in Big Sur.
 * Update config for OpenCore v0.6.7
