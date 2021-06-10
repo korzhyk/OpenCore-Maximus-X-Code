@@ -89,6 +89,8 @@ You must download all not bundled kexts and drivers from repositories by yoursel
 Note: As you can see only two ports are avaliable on Super-Speed (USB 3.0) and this is front USB 3.0 header. But keep in mind, USB 3.1 provided by ASMedia also avaliable (rear Type-C, Type-A and front panel header).
 
 ## Chnagelog
+###### 10/6/2021
+* Update config for OpenCore v0.7.0
 ###### 7/5/2021
 * Update config for OpenCore v0.6.9
 ###### 6/4/2021
